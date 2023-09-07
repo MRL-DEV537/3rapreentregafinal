@@ -57,7 +57,7 @@ section{
         height: 500px;
         background-color: #a2d2ff;
         @include just-flex;
-        margin: 50px 10% 100px 10%;
+        margin: 50px 10% 100px 35px;
         form {
             label {
                 color: $dark-color;
@@ -97,7 +97,6 @@ section{
                 -webkit-user-select: none;
                 touch-action: manipulation;
                 width: 100%;
-                will-change: transform;
             }
         }
     }

@@ -90,7 +90,7 @@ section .contactbox {
   background-color: #a2d2ff;
   justify-content: center;
   display: flex;
-  margin: 50px 10% 100px 10%;
+  margin: 50px 10% 100px 35px;
 }
 section .contactbox form label {
   color: black;
@@ -130,7 +130,6 @@ section .contactbox form .button-28 {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 100%;
-  will-change: transform;
 }
 
 footer, .footer-original {
