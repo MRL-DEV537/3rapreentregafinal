@@ -92,28 +92,7 @@ section .contactbox {
   display: flex;
   margin: 50px 50px 100px 35px;
 }
-section .contactbox form label {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  justify-content: center;
-  display: block;
-}
-section .contactbox form input {
-  border: solid;
-  justify-content: center;
-  display: block;
-  border-color: #8d99ae;
-  border-radius: 5px;
-}
-section .contactbox form img {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 30px;
-}
-section .contactbox form .nombrelogo {
-  transform: rotateY(180deg);
-}
-section .contactbox form .button-28 {
+section .contactbox .button-28 {
   margin-top: 10px;
   appearance: none;
   background-color: transparent;
@@ -140,18 +119,39 @@ section .contactbox form .button-28 {
   width: 100%;
   will-change: transform;
 }
-section .contactbox form .button-28:disabled {
+section .contactbox .button-28:disabled {
   pointer-events: none;
 }
-section .contactbox form .button-28:hover {
+section .contactbox .button-28:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
-section .contactbox form .button-28:active {
+section .contactbox .button-28:active {
   box-shadow: none;
   transform: translateY(0);
+}
+section .contactbox form label {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  display: block;
+}
+section .contactbox form input {
+  border: solid;
+  justify-content: center;
+  display: block;
+  border-color: #8d99ae;
+  border-radius: 5px;
+}
+section .contactbox form img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 30px;
+}
+section .contactbox form .nombrelogo {
+  transform: rotateY(180deg);
 }
 
 footer, .footer-original {
