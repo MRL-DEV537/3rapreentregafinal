@@ -90,7 +90,7 @@ section .contactbox {
   background-color: #a2d2ff;
   justify-content: center;
   display: flex;
-  margin: 50px 10% 100px 35px;
+  margin: 50px 50px 100px 35px;
 }
 section .contactbox form label {
   color: black;
