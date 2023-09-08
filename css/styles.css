@@ -80,7 +80,11 @@ section .catalogo img {
   border: solid;
   height: 200px;
 }
-section .contactbox {
+section .allcontact {
+  display: flex;
+  justify-content: center;
+}
+section .allcontact .contactbox {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 -25px 18px -14px inset, rgba(0, 0, 0, 0.25) 0 1px 2px, rgba(0, 0, 0, 0.25) 0 2px 4px, rgba(0, 0, 0, 0.25) 0 4px 8px, rgba(0, 0, 0, 0.25) 0 8px 16px, rgba(0, 0, 0, 0.25) 0 16px 32px;
   align-items: center;
@@ -90,9 +94,10 @@ section .contactbox {
   background-color: #a2d2ff;
   justify-content: center;
   display: flex;
-  margin: 50px 50px 100px 35px;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
-section .contactbox .button-28 {
+section .button-28 {
   margin-top: 10px;
   appearance: none;
   background-color: transparent;
@@ -119,38 +124,38 @@ section .contactbox .button-28 {
   width: 100%;
   will-change: transform;
 }
-section .contactbox .button-28:disabled {
+section .button-28:disabled {
   pointer-events: none;
 }
-section .contactbox .button-28:hover {
+section .button-28:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
-section .contactbox .button-28:active {
+section .button-28:active {
   box-shadow: none;
   transform: translateY(0);
 }
-section .contactbox form label {
+section form label {
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   display: block;
 }
-section .contactbox form input {
+section form input {
   border: solid;
   justify-content: center;
   display: block;
   border-color: #8d99ae;
   border-radius: 5px;
 }
-section .contactbox form img {
+section form img {
   margin-top: 15px;
   margin-bottom: 15px;
   width: 30px;
 }
-section .contactbox form .nombrelogo {
+section form .nombrelogo {
   transform: rotateY(180deg);
 }
 
@@ -163,7 +168,12 @@ footer, .footer-original {
   /* Ajusta el estilo del footer según tus preferencias */
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
+  section .allcontact {
+    display: flex;
+    margin-left: 360px;
+    justify-content: center;
+  }
   section .h2div {
     display: flex;
     justify-content: center;
@@ -179,9 +189,6 @@ footer, .footer-original {
   }
   section .talles img:hover {
     margin-top: 20px;
-  }
-  section .contactbox {
-    margin-left: 385px;
   }
   section .catalogo {
     grid-template-columns: repeat(3, 200px);
@@ -201,10 +208,17 @@ footer, .footer-original {
   header .collapse li {
     margin-left: 30px;
   }
+  .allcontact {
+    display: flex;
+    margin-right: 360px;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
-  section .contactbox {
-    margin-left: 470px;
+  section .allcontact {
+    display: flex;
+    margin-right: 400px;
+    justify-content: center;
   }
   section .catalogo {
     grid-template-columns: repeat(3, 200px);

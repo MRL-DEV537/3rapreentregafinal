@@ -1,5 +1,10 @@
-@media screen and (min-width:1024px) {
+@media (min-width:1024px) {
     section {
+        .allcontact {
+            display: flex;
+            margin-left: 360px;
+            justify-content: center;
+        }
         .h2div {
             @include flex;
             justify-content: center;
@@ -16,22 +21,21 @@
                 }
             }
         }
-        .contactbox {
-            margin-left: 385px;
-        }
-
-        .catalogo {
-            grid-template-columns: repeat(3, 200px);
-            img {
-                margin-bottom: 20px;
-                transition: 500ms;
-                &:hover {
-                    transform: scale(1.2);
-                    filter: brightness(0.5);
+        .catalogopadre {
+            display: grid;
+            justify-content: center;
+            .catalogo {
+                grid-template-columns: repeat(3, 200px);
+                img {
+                    margin-bottom: 20px;
+                    transition: 500ms;
+                    &:hover {
+                        transform: scale(1.2);
+                        filter: brightness(0.5);
+                    }
                 }
             }
         }
-    }
     header {
         .collapse {
             li {
@@ -41,29 +45,39 @@
             justify-content: end;
         }
     }
+    .allcontact {
+        display: flex;
+        margin-right: 360px;
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width:1200px) {
     section {
-        .contactbox {
-            margin-left: 470px;
+        .allcontact {
+            display: flex;
+            margin-right: 360px;
+            justify-content: center;
         }
-        .catalogo {
-            grid-template-columns: repeat(3, 200px);
-            justify-content: space-between; /* Distribuirá el espacio entre las columnas */
-            margin-bottom: 100px;
-            margin-left: 300px;
-            gap: 20px;
-            img {
-                margin-bottom: 40px;
-                transition: 500ms;
-                &:hover {
-                    transform: scale(1.2);
-                    filter: brightness(0.5);
+        .catalogopadre {
+            display: grid;
+            justify-content: center;
+            .catalogo {
+                grid-template-columns: repeat(3, 200px);
+                justify-content: space-between; /* Distribuirá el espacio entre las columnas */
+                margin-bottom: 100px;
+                margin-left: 300px;
+                gap: 20px;
+                img {
+                    margin-bottom: 40px;
+                    transition: 500ms;
+                    &:hover {
+                        transform: scale(1.2);
+                        filter: brightness(0.5);
+                    }
                 }
             }
         }
-    }
     header {
         .collapse {
             li {
@@ -72,6 +86,8 @@
             }
             @include flex;
             justify-content: end;
+            }
         }
     }
+}
 }
