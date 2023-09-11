@@ -1,21 +1,37 @@
-@media (min-width:1024px) {
+@media (min-width:320px) and (max-width:425px) {
     section {
-        .allcontact {
-            display: flex;
-            margin-left: 360px;
+        .catalogopadre {
+            display: grid;
             justify-content: center;
+            .catalogo {
+                display: grid;
+                margin-bottom: 115px;
+                width: 200px;
+                gap: 20px;
+                img {
+                    display: grid;
+                    width: 100%;
+                    border: solid;
+                    height: 200px;
+                }
+            }
         }
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    section {
         .h2div {
             @include flex;
             justify-content: center;
             .h2 {
-                margin-top: 30px;
+                margin-top: 80px;
             }
         }
         .talles {
             @include flex;
             img {
-                width: 400px;
+                width: 300px;
                 &:hover {
                     margin-top: 20px;
                 }
@@ -26,47 +42,8 @@
             justify-content: center;
             .catalogo {
                 grid-template-columns: repeat(3, 200px);
-                img {
-                    margin-bottom: 20px;
-                    transition: 500ms;
-                    &:hover {
-                        transform: scale(1.2);
-                        filter: brightness(0.5);
-                    }
-                }
-            }
-        }
-    header {
-        .collapse {
-            li {
-                margin-left: 30px;
-            }
-            @include flex;
-            justify-content: end;
-        }
-    }
-    .allcontact {
-        display: flex;
-        margin-right: 360px;
-        justify-content: center;
-    }
-}
-
-@media screen and (min-width:1200px) {
-    section {
-        .allcontact {
-            display: flex;
-            margin-right: 360px;
-            justify-content: center;
-        }
-        .catalogopadre {
-            display: grid;
-            justify-content: center;
-            .catalogo {
-                grid-template-columns: repeat(3, 200px);
-                justify-content: space-between; /* Distribuirá el espacio entre las columnas */
-                margin-bottom: 100px;
-                margin-left: 300px;
+                margin-bottom: 115px;
+                margin-right: 450px;
                 gap: 20px;
                 img {
                     margin-bottom: 40px;
@@ -78,16 +55,83 @@
                 }
             }
         }
-    header {
-        .collapse {
-            li {
-                font-size: 2.5vh;
-                margin-left: 30px;
-            }
-            @include flex;
-            justify-content: end;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1200px) { 
+    section {
+        .catalogopadre {
+            display: grid;
+            justify-content: center;
+            .catalogo {
+                grid-template-columns: repeat(3, 200px);
+                margin-bottom: 115px;
+                margin-right: 450px;
+                gap: 20px;
+                img {
+                    margin-bottom: 40px;
+                    transition: 500ms;
+                    &:hover {
+                        transform: scale(1.2);
+                        filter: brightness(0.5);
+                    }
+                }
             }
         }
     }
+    
+
+
 }
+@media (min-width:1200px) {
+    section {
+        .allcontact {
+            display: flex;
+            justify-content: center;
+        }
+        .catalogopadre {
+            display: grid;
+            justify-content: center;
+            .catalogo {
+                grid-template-columns: repeat(3, 200px);
+                margin-bottom: 115px;
+                margin-right: 450px;
+                gap: 20px;
+                img {
+                    margin-bottom: 40px;
+                    transition: 500ms;
+                    &:hover {
+                        transform: scale(1.2);
+                        filter: brightness(0.5);
+                    }
+                }
+            }
+        }
+        .h2div {
+            @include flex;
+            justify-content: center;
+            .h2 {
+                margin-top: 51px;
+            }
+        }
+        .talles {
+            @include flex;
+            img {
+                width: 400px;
+                &:hover {
+                    margin-top: 20px;
+                }
+            }
+        }
+    header {
+        .collapse {
+            @include flex;
+            justify-content: end;
+                li {
+                    font-size: 2.5vh;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
 }

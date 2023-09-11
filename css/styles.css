@@ -67,14 +67,17 @@ section .completarcampo {
   justify-content: center;
   display: flex;
 }
-section .catalogo {
+section .catalogopadre {
+  display: grid;
+  justify-content: center;
+}
+section .catalogopadre .catalogo {
   display: grid;
   margin-bottom: 100px;
   width: 200px;
-  margin-left: 18.5%;
   gap: 20px;
 }
-section .catalogo img {
+section .catalogopadre .catalogo img {
   display: grid;
   width: 100%;
   border: solid;
@@ -82,7 +85,6 @@ section .catalogo img {
 }
 section .allcontact {
   display: flex;
-  justify-content: center;
 }
 section .allcontact .contactbox {
   border-radius: 10px;
@@ -159,6 +161,10 @@ section form .nombrelogo {
   transform: rotateY(180deg);
 }
 
+section .allcontact {
+  justify-content: center;
+}
+
 footer, .footer-original {
   background-color: black;
   color: white;
@@ -168,18 +174,109 @@ footer, .footer-original {
   /* Ajusta el estilo del footer según tus preferencias */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 320px) and (max-width: 425px) {
+  section .catalogopadre {
+    display: grid;
+    justify-content: center;
+  }
+  section .catalogopadre .catalogo {
+    display: grid;
+    margin-bottom: 115px;
+    width: 200px;
+    gap: 20px;
+  }
+  section .catalogopadre .catalogo img {
+    display: grid;
+    width: 100%;
+    border: solid;
+    height: 200px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  section .h2div {
+    display: flex;
+    justify-content: center;
+  }
+  section .h2div .h2 {
+    margin-top: 80px;
+  }
+  section .talles {
+    display: flex;
+  }
+  section .talles img {
+    width: 300px;
+  }
+  section .talles img:hover {
+    margin-top: 20px;
+  }
+  section .catalogopadre {
+    display: grid;
+    justify-content: center;
+  }
+  section .catalogopadre .catalogo {
+    grid-template-columns: repeat(3, 200px);
+    margin-bottom: 115px;
+    margin-right: 450px;
+    gap: 20px;
+  }
+  section .catalogopadre .catalogo img {
+    margin-bottom: 40px;
+    transition: 500ms;
+  }
+  section .catalogopadre .catalogo img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.5);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  section .catalogopadre {
+    display: grid;
+    justify-content: center;
+  }
+  section .catalogopadre .catalogo {
+    grid-template-columns: repeat(3, 200px);
+    margin-bottom: 115px;
+    margin-right: 450px;
+    gap: 20px;
+  }
+  section .catalogopadre .catalogo img {
+    margin-bottom: 40px;
+    transition: 500ms;
+  }
+  section .catalogopadre .catalogo img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.5);
+  }
+}
+@media (min-width: 1200px) {
   section .allcontact {
     display: flex;
-    margin-left: 360px;
     justify-content: center;
+  }
+  section .catalogopadre {
+    display: grid;
+    justify-content: center;
+  }
+  section .catalogopadre .catalogo {
+    grid-template-columns: repeat(3, 200px);
+    margin-bottom: 115px;
+    margin-right: 450px;
+    gap: 20px;
+  }
+  section .catalogopadre .catalogo img {
+    margin-bottom: 40px;
+    transition: 500ms;
+  }
+  section .catalogopadre .catalogo img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.5);
   }
   section .h2div {
     display: flex;
     justify-content: center;
   }
   section .h2div .h2 {
-    margin-top: 30px;
+    margin-top: 51px;
   }
   section .talles {
     display: flex;
@@ -190,56 +287,11 @@ footer, .footer-original {
   section .talles img:hover {
     margin-top: 20px;
   }
-  section .catalogo {
-    grid-template-columns: repeat(3, 200px);
-  }
-  section .catalogo img {
-    margin-bottom: 20px;
-    transition: 500ms;
-  }
-  section .catalogo img:hover {
-    transform: scale(1.2);
-    filter: brightness(0.5);
-  }
-  header .collapse {
+  section header .collapse {
     display: flex;
     justify-content: end;
   }
-  header .collapse li {
-    margin-left: 30px;
-  }
-  .allcontact {
-    display: flex;
-    margin-right: 360px;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  section .allcontact {
-    display: flex;
-    margin-right: 400px;
-    justify-content: center;
-  }
-  section .catalogo {
-    grid-template-columns: repeat(3, 200px);
-    justify-content: space-between; /* Distribuirá el espacio entre las columnas */
-    margin-bottom: 100px;
-    margin-left: 300px;
-    gap: 20px;
-  }
-  section .catalogo img {
-    margin-bottom: 40px;
-    transition: 500ms;
-  }
-  section .catalogo img:hover {
-    transform: scale(1.2);
-    filter: brightness(0.5);
-  }
-  header .collapse {
-    display: flex;
-    justify-content: end;
-  }
-  header .collapse li {
+  section header .collapse li {
     font-size: 2.5vh;
     margin-left: 30px;
   }
